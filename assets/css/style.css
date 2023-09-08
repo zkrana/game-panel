@@ -1,0 +1,1052 @@
+/*
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: 'Poppins', sans-serif;
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+:root{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --succes-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+body{
+  font-family: 'Exo', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.313rem;
+}
+
+/* Global Style */
+
+.container {
+    display: block;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.app{
+    min-height: 100vh;
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+.top-header{
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 326px;
+}
+
+
+.user-components {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.u-c-up-layer,
+.u-c-down-layer{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.u-c-up-layer a {
+  background-color: white;
+  color: #60B209;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 170px;
+  font: normal normal medium 16px/28px Poppins;
+  text-transform: capitalize;
+}
+.u-c-up-layer a:nth-child(2) {
+  color: #FF0000;
+}
+.u-c-up-layer a img {
+  width: 22px;
+  height: 26px;
+  object-fit: contain;
+}
+.u-c-up-layer button img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  margin-top: -2px;
+}
+
+.u-c-up-layer button {
+  background: transparent linear-gradient(180deg, #7A7A7A 0%, #302E2E 61%, #272526 100%) 0% 0% no-repeat padding-box;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 170px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+  position: relative;
+}
+.u-c-up-layer button::after {
+  content: '';
+  width: 19px;
+  background: transparent linear-gradient(180deg, var(--unnamed-color-fec72e) 0%, #FE812E 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #FEC72E 0%, #FE812E 100%) 0% 0% no-repeat padding-box;
+  position: absolute;
+  right: 0;
+  height: 46px;
+  top: 0px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.log-circle{
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: inset 0px -1px 0px #5C5C5C;
+  transform: matrix(0.5, -0.87, 0.87, 0.5, 0, 0);
+}
+.u-c-down-layer-ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#dropdownMenuButton1 {
+  border: unset;
+  align-items: center;
+  display: flex;
+}
+.u-c-down-layer-ul li{
+  height: 20px;
+  padding-right: 38px;
+  border-right: 1px solid white;
+}
+.u-c-down-layer-ul li a{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: white;
+}
+.u-c-down-layer-ul li:nth-child(1) {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.u-c-down-layer span{
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+.u-c-down-layer span.active,
+.u-c-down-layer li a.active{
+  color: #FEC72E;
+}
+.reload{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.reload img{
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.dropdown-menu{
+  min-width: 11rem !important;
+  display: none;
+}
+.dropdown-menu.show li {
+  border: unset;
+  padding-right: 0;
+  height: 40px;
+}
+.u-c-down-layer-ul li:nth-child(3) {
+  border: unset;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: space-between;
+}
+.swal2-cancel.btn.btn-danger.me-3,
+.swal2-confirm.btn.btn-primary {
+  color: black;
+}
+.swal2-cancel.btn.btn-danger.me-3:hover,
+.swal2-confirm.btn.btn-primary:hover {
+  color: white;
+}
+.dropdown-item{
+  color: #272526 !important;
+}
+#dropdownMenuButton1 {
+  padding: 0 0 0 5px;
+}
+
+
+.marquee{
+  padding-top: 34px;
+  display: flex;
+  align-items: center;
+}
+.marquee img{
+  width: 39px;
+  height: 33px;
+  object-fit: contain;
+}
+marquee {
+  color: #fff;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+}
+
+.header{
+  margin-top: 21px;
+}
+.header ul{
+  width: 100%;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.header ul::after{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 10px;
+  background: transparent linear-gradient(180deg, #FFFFFF 0%, #A7A7A7 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 3px 0px 6px #000000AD;
+  z-index: -1;
+  mix-blend-mode: hard-light;
+}
+.header ul li{
+  width: 20.7%;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FEC72E 0% 0% no-repeat padding-box;
+  box-shadow: 3px 0px 6px #000000D6;
+  border-radius: 25px 25px 0px 0px;
+  color: #272526;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  mix-blend-mode: hue;
+  margin-right: -10px;
+}
+.header ul li.active{
+  width: 20.7%;
+  background: transparent linear-gradient(180deg, #FFFFFF 0%, #A7A7A7 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 3px 0px 6px #000000AD;
+  border-radius: 25px 25px 0px 0px;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: inherit;
+}
+.header ul li a{
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  transition: color .4s;
+}
+.panel{
+  height: fit-content;
+  background: transparent #000 0% 0% no-repeat padding-box;
+  box-shadow: 6px 6px 15px #000000;
+  opacity: 1;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  margin-top: 29px;
+  padding: 34px 61px 60px 67px;
+}
+.game-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid grey;
+}
+.game-header select{
+  background: #FEC72E 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  padding: 7px 15px 8px 15px;
+  text-transform: uppercase;
+}
+
+.all-games {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.games-item {
+  background-image: url(../images/games/game-bg.svg);
+  background-size: 100% 100%;
+  background-position: 100%;
+  width: 23%;
+  height: 305px;
+  position: relative;
+}
+.games-img {
+  width: 92%;
+  height: 69%;
+  position: absolute;
+  left: 7px;
+  top:  5px;
+  right: 10px;
+}
+.games-item img{
+  width: 100%;
+  height: 215px;
+  object-fit: contain;
+  border-top-left-radius: 44px;
+  border-top-right-radius: 44px;
+}
+.game-title {
+  position: absolute;
+  bottom: 21px;
+  left: 49%;
+  transform: translateX(-50%);
+  text-shadow: 0px 3px 6px #00000029;
+  text-transform: uppercase;
+  width: 92%;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-title span{
+  font: normal normal bold 22px/30px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+/* Account Page Styling */
+.account {
+  text-align: center;
+}
+.main-title{
+  font: normal normal bold 28px/42px Poppins;
+  color: white;
+}
+.acc-data {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 41px;
+}
+.acc-data .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.acc-data .form-group label {
+  color: white;
+  font-size: 28px;
+  line-height: 42px;
+  padding-right: 26px;
+}
+.acc-data .form-group input,
+.form-group-s select,
+.form-group-s input,
+.form-group.fg-p select,
+.acc-data .form-group textarea {
+  width: 344px;
+  height: 57px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 33px;
+  background-image: url(../images/account/input-bg.png);
+  color: white;
+}
+.acc-data .form-group textarea {
+  min-height: 100px;
+  -webkit-appearance: none;
+  text-align: left;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 15px;
+}
+.form-group.fg-p select{
+  text-align: left;
+  color: #7A7A7A;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: left;
+  padding: 4px 4px 4px 10px;
+  background-color: #000;
+}
+.form-group-s select,
+.form-group-s input{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: left;
+  padding: 4px 4px 4px 10px;
+  background-color: #000;
+}
+.form-group-s select{
+  font-size: 20px;
+  line-height: 30px;
+  box-shadow: 0px 3px 6px #00000080;
+  opacity: 0.32;
+}
+.acc-data button {
+  margin-top: 37px;
+  background-color: #FEC72E;
+  color: #000;
+  font: normal normal medium 28px/42px Poppins;
+  text-transform: uppercase;
+  padding: 12px 95px;
+}
+.form-footer{
+  margin-top: 40px;
+  display: block;
+  font-size: 22px;
+  line-height: 33px;
+  color: #FEC72E;
+  text-align: center;
+  text-decoration: underline;
+}
+.form-footer:hover{
+  color: white;
+}
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 22px;
+  font: normal normal normal 22px/33px Poppins;
+  letter-spacing: 0px;
+  color: #A09D9D;
+  text-shadow: 0px 3px 6px #00000080;
+}
+.checkbox input {
+  width: 20px;
+  height: 20px;
+  color: #A09D9D;
+}
+
+.acc-data-wrap {
+  width: 600px;
+}
+.form-group-s {
+  margin-bottom: 15px;
+}
+.form-group-s label {
+  display: block;
+  text-align: left;
+  margin-bottom: 7px;
+  font-size: 22px;
+  line-height: 33px;
+  color: white;
+}
+
+.dc label{
+  color: #FEC72E;
+}
+
+
+
+/* History Page */
+.h-data-select {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 32px;
+  margin-top: 36px;
+  margin-bottom: 15px;
+}
+.h-data-select span{
+  font-size: 22px;
+  line-height: 33px; 
+  color: #FEC72E;
+  cursor: pointer;
+}
+.table tr{
+  background: transparent #000000 0% 0% no-repeat padding-box;
+  border: 1px solid #FEC72E;
+}
+.table tr:nth-child(1){
+  background-color: #FEC72E;
+  padding: 13px 19px 10px 28px;
+}
+
+.table tr th{
+  font-size: 22px;
+  line-height: 33px;
+  color: black;
+  text-shadow: 0px 3px 6px #00000029;
+}
+.history{
+  padding: 52px 42.5px 58px 42.5px;
+}
+.table tr td{
+  color: white;
+  font-size: 18px;
+  line-height: 27px;
+}
+.font-c{
+  color: #FEC72E !important;
+}
+.table tr th:first-child,
+.table tr td:first-child{
+  text-align: left;
+}
+
+
+/* Setor Dana */
+.setor{
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.setor svg{
+  margin-left: 5px;
+  transition: transform .4s;
+}
+.setor:hover svg{
+  transform: rotate(180deg);
+}
+#Polygon_5{
+  fill: #000000;
+}
+.dropdown-menu{
+  display: none;
+}
+.setor:hover .dropdown-menu{
+  display: block;
+  position: absolute;
+  bottom: -150px;
+  width: 100%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 3px solid #A7A7A7;
+  background-color: unset;
+  overflow: hidden;
+  height: 151px;
+  mix-blend-mode: color;
+}
+.dropdown-menu ul {
+  display: block;
+}
+.dropdown-menu ul li{
+  width: 100%;
+}
+.dropdown-menu ul::after {
+ content: unset;
+}
+.dropdown-menu ul li {
+  border-radius: unset;
+}
+.dropdown-menu ul li {
+  width: 100%;
+  height: 69px;
+  box-shadow: unset;
+  border-bottom: 1px solid white;
+}
+
+.dropdown-menu li.active {
+  box-shadow: unset !important;
+  border-radius: unset !important;
+  width: 100% !important;
+  background-color: #FEC72E !important;
+  mix-blend-mode: unset !important;
+}
+.jumlah{
+  font-size: 22px;
+  line-height: 33px;
+}
+.form-group.fg {
+  display: block;
+  text-align: left;
+}
+.form-group.fg .form-group {
+  margin-left: 60px;
+}
+.text-left input{
+  text-align: left !important;
+  padding-left: 10px;
+}
+
+/* Promo */
+.all-promo {
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.promo-item {
+  width: 49%;
+  box-shadow: 20px 20px 50px #FEC72E38;
+}
+
+
+
+
+
+
+.copyright{
+  margin-top: 99px;
+  padding-bottom: 42px;
+}
+
+.copyright p{
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: white;
+}
+
+
