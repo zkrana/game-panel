@@ -58,13 +58,6 @@ html {
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
-body {
-  margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
-}
-
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
@@ -126,15 +119,6 @@ strong {
 2. Correct the odd `em` font sizing in all browsers.
 */
 
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
 
 /*
 Add the correct font size in all browsers.
@@ -432,7 +416,7 @@ video {
 }
 
 body{
-  font-family: 'Exo', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.313rem;
@@ -448,6 +432,7 @@ body{
 }
 
 
+
 .app{
     min-height: 100vh;
     background-image: url(../images/bg.png);
@@ -457,8 +442,12 @@ body{
 }
 .top-header{
     padding: 18px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .logo{
     width: 326px;
@@ -467,16 +456,27 @@ body{
 
 .user-components {
   width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 20px;
 }
 .u-c-up-layer,
 .u-c-down-layer{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .u-c-up-layer a {
@@ -485,9 +485,15 @@ body{
   padding-top: 10px;
   padding-bottom: 8px;
   border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 8px;
   width: 170px;
   font: normal normal medium 16px/28px Poppins;
@@ -499,24 +505,34 @@ body{
 .u-c-up-layer a img {
   width: 22px;
   height: 26px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .u-c-up-layer button img {
   width: 16px;
   height: 16px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-top: -2px;
 }
 
 .u-c-up-layer button {
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#7A7A7A), color-stop(61%, #302E2E), to(#272526)) 0% 0% no-repeat padding-box;
+  background: transparent -o-linear-gradient(top, #7A7A7A 0%, #302E2E 61%, #272526 100%) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, #7A7A7A 0%, #302E2E 61%, #272526 100%) 0% 0% no-repeat padding-box;
   color: #fff;
   padding-top: 10px;
   padding-bottom: 8px;
   border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 12px;
   width: 170px;
   font-size: 16px;
@@ -527,11 +543,15 @@ body{
 .u-c-up-layer button::after {
   content: '';
   width: 19px;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(var(--unnamed-color-fec72e)), to(#FE812E)) 0% 0% no-repeat padding-box;
+  background: transparent -o-linear-gradient(top, var(--unnamed-color-fec72e) 0%, #FE812E 100%) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, var(--unnamed-color-fec72e) 0%, #FE812E 100%) 0% 0% no-repeat padding-box;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#FEC72E), to(#FE812E)) 0% 0% no-repeat padding-box;
+  background: transparent -o-linear-gradient(top, #FEC72E 0%, #FE812E 100%) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, #FEC72E 0%, #FE812E 100%) 0% 0% no-repeat padding-box;
   position: absolute;
   right: 0;
-  height: 46px;
+  height: 44px;
   top: 0px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -541,17 +561,28 @@ body{
   height: 10px;
   background-color: white;
   border-radius: 100%;
-  box-shadow: inset 0px -1px 0px #5C5C5C;
-  transform: matrix(0.5, -0.87, 0.87, 0.5, 0, 0);
+  -webkit-box-shadow: inset 0px -1px 0px #5C5C5C;
+          box-shadow: inset 0px -1px 0px #5C5C5C;
+  -webkit-transform: matrix(0.5, -0.87, 0.87, 0.5, 0, 0);
+      -ms-transform: matrix(0.5, -0.87, 0.87, 0.5, 0, 0);
+          transform: matrix(0.5, -0.87, 0.87, 0.5, 0, 0);
 }
 .u-c-down-layer-ul {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 #dropdownMenuButton1 {
   border: unset;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .u-c-down-layer-ul li{
@@ -567,9 +598,15 @@ body{
 }
 .u-c-down-layer-ul li:nth-child(1) {
   width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .u-c-down-layer span{
   font-size: 16px;
@@ -584,15 +621,20 @@ body{
   color: #FEC72E;
 }
 .reload{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 5px;
   cursor: pointer;
 }
 .reload img{
   width: 14px;
   height: 14px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .dropdown-menu{
@@ -607,10 +649,16 @@ body{
 .u-c-down-layer-ul li:nth-child(3) {
   border: unset;
   width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .swal2-cancel.btn.btn-danger.me-3,
 .swal2-confirm.btn.btn-primary {
@@ -630,13 +678,18 @@ body{
 
 .marquee{
   padding-top: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .marquee img{
   width: 39px;
   height: 33px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 marquee {
   color: #fff;
@@ -649,6 +702,8 @@ marquee {
 }
 .header ul{
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   z-index: 1;
@@ -659,19 +714,29 @@ marquee {
   bottom: -10px;
   width: 100%;
   height: 10px;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#A7A7A7)) 0% 0% no-repeat padding-box;
+  background: transparent -o-linear-gradient(top, #FFFFFF 0%, #A7A7A7 100%) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, #FFFFFF 0%, #A7A7A7 100%) 0% 0% no-repeat padding-box;
-  box-shadow: 3px 0px 6px #000000AD;
+  -webkit-box-shadow: 3px 0px 6px #000000AD;
+          box-shadow: 3px 0px 6px #000000AD;
   z-index: -1;
   mix-blend-mode: hard-light;
 }
 .header ul li{
   width: 20.7%;
   height: 66px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #FEC72E 0% 0% no-repeat padding-box;
-  box-shadow: 3px 0px 6px #000000D6;
+  -webkit-box-shadow: 3px 0px 6px #000000D6;
+          box-shadow: 3px 0px 6px #000000D6;
   border-radius: 25px 25px 0px 0px;
   color: #272526;
   border-top-left-radius: 20px;
@@ -681,8 +746,11 @@ marquee {
 }
 .header ul li.active{
   width: 20.7%;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#A7A7A7)) 0% 0% no-repeat padding-box;
+  background: transparent -o-linear-gradient(top, #FFFFFF 0%, #A7A7A7 100%) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, #FFFFFF 0%, #A7A7A7 100%) 0% 0% no-repeat padding-box;
-  box-shadow: 3px 0px 6px #000000AD;
+  -webkit-box-shadow: 3px 0px 6px #000000AD;
+          box-shadow: 3px 0px 6px #000000AD;
   border-radius: 25px 25px 0px 0px;
   position: relative;
   z-index: 1;
@@ -692,12 +760,17 @@ marquee {
   font-size: 20px;
   line-height: 30px;
   text-transform: uppercase;
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
   transition: color .4s;
 }
 .panel{
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   background: transparent #000 0% 0% no-repeat padding-box;
-  box-shadow: 6px 6px 15px #000000;
+  -webkit-box-shadow: 6px 6px 15px #000000;
+          box-shadow: 6px 6px 15px #000000;
   opacity: 1;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -705,9 +778,15 @@ marquee {
   padding: 34px 61px 60px 67px;
 }
 .game-header{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 16px;
   border-bottom: 1px solid grey;
 }
@@ -720,52 +799,65 @@ marquee {
 
 .all-games {
   margin-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .games-item {
-  background-image: url(../images/games/game-bg.svg);
-  background-size: 100% 100%;
-  background-position: 100%;
   width: 23%;
-  height: 305px;
+  height: 290px;
   position: relative;
+  border: 2px solid #FEC72E;
+  border-radius: 30px;
 }
+
 .games-img {
-  width: 92%;
-  height: 69%;
-  position: absolute;
-  left: 7px;
-  top:  5px;
-  right: 10px;
-}
-.games-item img{
-  width: 100%;
   height: 215px;
-  object-fit: contain;
-  border-top-left-radius: 44px;
-  border-top-right-radius: 44px;
 }
+.games-img img {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  object-fit: cover;
+  height: 100%;
+}
+
 .game-title {
-  position: absolute;
-  bottom: 21px;
-  left: 49%;
-  transform: translateX(-50%);
-  text-shadow: 0px 3px 6px #00000029;
-  text-transform: uppercase;
-  width: 92%;
-  text-align: center;
-  height: 60px;
+  height: 71px;
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+.item-t-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 !important;
+  position: absolute;
+  left: 0px;
+  object-fit: cover !important;
+  z-index: -1;
 }
 .game-title span{
-  font: normal normal bold 22px/30px Poppins;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0px;
   color: #000000;
+  margin-top: 10px;
 }
 
 /* Account Page Styling */
@@ -783,9 +875,15 @@ marquee {
 }
 .acc-data .form-group {
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .acc-data .form-group label {
   color: white;
@@ -835,7 +933,8 @@ marquee {
 .form-group-s select{
   font-size: 20px;
   line-height: 30px;
-  box-shadow: 0px 3px 6px #00000080;
+  -webkit-box-shadow: 0px 3px 6px #00000080;
+          box-shadow: 0px 3px 6px #00000080;
   opacity: 0.32;
 }
 .acc-data button {
@@ -859,9 +958,15 @@ marquee {
   color: white;
 }
 .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   margin-top: 10px;
   margin-bottom: 22px;
@@ -899,9 +1004,15 @@ marquee {
 
 /* History Page */
 .h-data-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 32px;
   margin-top: 36px;
   margin-bottom: 15px;
@@ -948,16 +1059,28 @@ marquee {
 .setor{
   position: relative;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .setor svg{
   margin-left: 5px;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  -o-transition: transform .4s;
   transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
 }
 .setor:hover svg{
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 #Polygon_5{
   fill: #000000;
@@ -982,7 +1105,7 @@ marquee {
   display: block;
 }
 .dropdown-menu ul li{
-  width: 100%;
+  width: 100% !important;
 }
 .dropdown-menu ul::after {
  content: unset;
@@ -993,12 +1116,14 @@ marquee {
 .dropdown-menu ul li {
   width: 100%;
   height: 69px;
-  box-shadow: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
   border-bottom: 1px solid white;
 }
 
 .dropdown-menu li.active {
-  box-shadow: unset !important;
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
   border-radius: unset !important;
   width: 100% !important;
   background-color: #FEC72E !important;
@@ -1022,20 +1147,42 @@ marquee {
 
 /* Promo */
 .all-promo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 18px;
 }
 .promo-item {
   width: 49%;
-  box-shadow: 20px 20px 50px #FEC72E38;
+  -webkit-box-shadow: 20px 20px 50px #FEC72E38;
+          box-shadow: 20px 20px 50px #FEC72E38;
+  position: relative;
 }
-
-
-
-
-
+.promo-btn {
+  display: block;
+  position: absolute;
+  bottom: 32px;
+  color: #000;
+  right: 15px;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 7px 15px;
+  background: #FEC72E;
+  border-radius: 30px;
+}
+.promo-btn::after {
+  content: '';
+  width: 306px;
+  height: 55px;
+  border: 1px solid aliceblue;
+  position: absolute;
+  right: -6px;
+  top: -5px;
+  border-radius: 30px;
+}
 
 .copyright{
   margin-top: 99px;
@@ -1050,3 +1197,67 @@ marquee {
 }
 
 
+
+@media screen and ( max-width: 1200px ) {
+  .container {
+    width: 100%;
+    max-width: 95%;
+  }
+  .games-img {
+    height: 228px;
+  }
+  .game-title {
+    height: 52px;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+  }
+  .header ul li {
+    width: 20.7%;
+  }
+  .game-title span {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 6px;
+  }
+  .panel {
+    padding: 34px 39px 57px 39px;
+  }
+
+}
+
+@media screen and ( max-width: 1100px ) {
+  .header ul li {
+    width: 20.85%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header ul li {
+    width: 20.9%;
+  }
+  .games-item{
+    height: 230px;
+  }
+  .games-img {
+    height: 170px;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .games-item {
+    width: 31%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .header ul li {
+    width: 21.1%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header ul li {
+    width: 21.2%;
+  }
+}
